@@ -1,0 +1,18 @@
+---
+ - name: connect to eos
+   hosts: all
+   gather_facts: no
+   connection: local
+
+   tasks:
+
+    - name: run command
+      eos_command:
+        commands:
+          - show version
+      register: eos_show_version
+          
+    - name: print to screen
+      debug:
+        msg:
+          - "{{ eos_show_version }}"
