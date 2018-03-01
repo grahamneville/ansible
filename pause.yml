@@ -8,12 +8,12 @@
 
      - name: Pring message
        debug:
-         msg: "I'm going to wait 10 mins"
+         msg: "I'm going to wait 15 mins"
 
      - name: Pause for 10mins
        pause:
-         minutes: 5
+         minutes: 15
       
      - name: Pring message
        debug:
-         msg: "I waited 10 mins"
+         msg: "I waited 15 mins"
