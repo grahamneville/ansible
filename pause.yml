@@ -1,0 +1,19 @@
+---
+ - name: Pause Playbook
+   hosts: all
+   gather_facts: no
+   connection: local
+
+   tasks:
+
+     - name: Pring message
+       debug:
+         msg: "I'm going to wait 10 mins"
+
+     - name: Pause for 10mins
+       pause:
+         minutes: 5
+      
+     - name: Pring message
+       debug:
+         msg: "I waited 10 mins"
