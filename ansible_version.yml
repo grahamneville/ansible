@@ -1,0 +1,11 @@
+---
+ - name: Print Ansible Version
+   hosts: all
+   gather_facts: no
+   connection: local
+
+   tasks:
+
+     - name: Print Ansible Version message
+       debug:
+         msg: "{{ ansible_version }}"
